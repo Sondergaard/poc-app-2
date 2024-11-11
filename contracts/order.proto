@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package contracts;
+
+option csharp_namespace = "Quantum.Orders";
+
+message Order {
+    string id = 1;
+    repeated OrderLineItem items = 2;
+}
+
+message OrderLineItem {
+    string product_id = 1;
+    int32 quantity = 2;
+    double price = 3;
+}
